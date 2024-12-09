@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Daniel Gomm",
-    "label": "Scientist",
+    "label": "PhD Student",
     "image": "",
     "email": "daniel.gomm@cwi.nl",
     "url": "https://daniel-gomm.github.io/",
@@ -14,7 +14,7 @@
       {
         "network": "Bluesky",
         "username": "daniel-gomm.bsky.social",
-        "url": "https://bsky.app/profile/daniel-gomm.bsky.social"
+        "url": ""
       }
     ]
   },
