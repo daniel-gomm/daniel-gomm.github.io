@@ -7,8 +7,10 @@ subtitle: <a href='https://www.cwi.nl'>Centrum Wiskunde & Informatica</a>. <a hr
 profile:
   align: right
   image: daniel_prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
+  # TODO: Change to my actual room
   more_info: >
+    <p>CWI Office L319</p>
     <p>Science Park 123</p>
     <p>Amsterdam, Netherlands</p>
 
