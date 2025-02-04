@@ -6,3 +6,4 @@ repo_description_lines_max: 2
 github_repos:
   - daniel-gomm/disco-graph
   - apache/streampipes
+  - daniel-gomm/PyTEI
