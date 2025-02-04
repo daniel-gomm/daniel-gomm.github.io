@@ -6,9 +6,8 @@ inline: false
 related_posts: false
 ---
 
-
 I am excited to share that today I joined the Centrum Wiskunde & Informatica (CWI) as PhD student. Joining the Database Architectures group, I will be working at the intersection of generative AI, information retrieval and structured data (tables, relational databases, spreadsheets,...) on contextualizing generative AI in structured data under the supervision of Madelon Hulsebos (CWI) and Maarten de Rijke (University of Amsterdam).
 
-I am excited about the opportunity to contribute towards democratizing insights from structured data in my PhD. 
+I am excited about the opportunity to contribute towards democratizing insights from structured data in my PhD.
 
 ---

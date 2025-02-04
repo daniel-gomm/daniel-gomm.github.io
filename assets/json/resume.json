@@ -54,7 +54,10 @@
       "startDate": "2020-11-01",
       "endDate": "2021-12-31",
       "summary": "Work on open-source industrial IoT stream processing toolbox Apache StreamPipes",
-      "highlights": ["Integration of findings from bachelor thesis into Apache StreamPipes", "Enabling the dynamic re-distribution of computing workloads across distributed infrastructure"]
+      "highlights": [
+        "Integration of findings from bachelor thesis into Apache StreamPipes",
+        "Enabling the dynamic re-distribution of computing workloads across distributed infrastructure"
+      ]
     },
     {
       "name": "Robert Bosch GmbH",
@@ -97,8 +100,14 @@
       "startDate": "2020-10-01",
       "endDate": "2023-12-12",
       "score": "1.0 (equiv. to GPA of 4.0)",
-      "courses": ["Master Thesis that proposes novel explanation methods for Temporal Graph Neural Networks based on counterfactuals", "Machine Learning", "NLP", "Automated Production Systems"]
-    }, {
+      "courses": [
+        "Master Thesis that proposes novel explanation methods for Temporal Graph Neural Networks based on counterfactuals",
+        "Machine Learning",
+        "NLP",
+        "Automated Production Systems"
+      ]
+    },
+    {
       "institution": "Aalto University",
       "location": "Espoo, Finland",
       "url": "https://www.aalto.fi/",
@@ -108,7 +117,8 @@
       "endDate": "2022-06-31",
       "score": "4.65 (equiv. to GPA of 3.8)",
       "courses": ["Big Data Platforms", "Deep Learning"]
-    },{
+    },
+    {
       "institution": "Karlsruhe Institute of Technology",
       "location": "Karlsruhe, Germany",
       "url": "https://www.kit.edu/",
@@ -117,7 +127,12 @@
       "startDate": "2016-10-01",
       "endDate": "2020-12-12",
       "score": "1.7 (equiv. to GPA of 3.3)",
-      "courses": ["Bachelor Thesis on dynamic re-distribution of computing operations in stream processing pipelines across edge and cloud nodes" , "AI", "Microelectromechanical systems", "Robotics"]
+      "courses": [
+        "Bachelor Thesis on dynamic re-distribution of computing operations in stream processing pipelines across edge and cloud nodes",
+        "AI",
+        "Microelectromechanical systems",
+        "Robotics"
+      ]
     }
   ],
   "publications": [
@@ -145,27 +160,23 @@
       "language": "German",
       "fluency": "Native speaker",
       "icon": ""
-    }, {
+    },
+    {
       "language": "English",
       "fluency": "Fluent",
       "icon": ""
-    }, {
+    },
+    {
       "language": "Spanish",
       "fluency": "Limited working proficiency",
       "icon": ""
     }
-
   ],
   "interests": [
     {
       "name": "DIY",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Woodworking",
-        "3D-Modeling",
-        "3D-Printing",
-        "CNC-Machining"
-      ]
+      "keywords": ["Woodworking", "3D-Modeling", "3D-Printing", "CNC-Machining"]
     }
   ]
 }
