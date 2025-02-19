@@ -28,5 +28,5 @@ databases, spreadsheets,...) by contextualizing generative methods in structured
 I come from a highly interdisciplinary background in engineering, economy, and computer science and have plenty of
 real-world experience in industry, academia, and policy (have a look at my CV for more information).
 
-In my free time I like to be creative in small (DIY) projects. I'm into CAD and CNC machining (additive and subtractive 
+In my free time I like to be creative in small (DIY) projects. I'm into CAD and CNC machining (additive and subtractive
 manufacturing) and generally in tinkering around! I also love to go to the mountains to hike, ski, or climb.
