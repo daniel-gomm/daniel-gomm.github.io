@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.cwi.nl'>Centrum Wiskunde & Informatica</a>. <a href='https://www.uva.nl'>University of Amsterdam</a>. Bridging structure data and generative AI.
+subtitle: <a href='https://www.cwi.nl'>Centrum Wiskunde & Informatica</a>. <a href='https://www.uva.nl'>University of Amsterdam</a>. Bridging structured data and generative AI.
 
 profile:
   align: right
@@ -26,8 +26,7 @@ With my research I contribute towards democratizing insights from the wealth of 
 databases, spreadsheets,...) by contextualizing generative methods in structured data.
 
 I come from a highly interdisciplinary background in engineering, economy, and computer science and have plenty of
-real-world experience in industry, academia, and policy (consult my CV for more information).
+real-world experience in industry, academia, and policy (have a look at my CV for more information).
 
-In my free time I like to work on small (DIY) projects. Ever since I built my first 3D-printer when I was in high-school
-I've been into 3D modeling and printing. I am also very passionate about climbing, both in the local climbing gyms and
-in the mountains.
+In my free time I like to be creative in small (DIY) projects. I'm into CAD and CNC machining (additive and subtractive 
+manufacturing) and generally in tinkering around! I also love to go to the mountains to hike, ski, or climb.
