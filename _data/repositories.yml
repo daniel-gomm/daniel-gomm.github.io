@@ -7,3 +7,4 @@ github_repos:
   - daniel-gomm/disco-graph
   - apache/streampipes
   - daniel-gomm/PyTEI
+  - daniel-gomm/table-serialization-kitchen
