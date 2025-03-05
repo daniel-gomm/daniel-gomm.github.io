@@ -4,7 +4,7 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
-  - daniel-gomm/disco-graph
-  - apache/streampipes
   - daniel-gomm/PyTEI
   - daniel-gomm/table-serialization-kitchen
+  - daniel-gomm/disco-graph
+  - apache/streampipes
