@@ -12,6 +12,9 @@ toc:
 thumbnail: assets/img/blog/table_serialization_cover_picture.jpg
 ---
 
+> TL;DR:
+> This blog post explores the importance of table serialization on the performance of Large Language Models. We introduce the [Table Serialization Kitchen](https://github.com/daniel-gomm/table-serialization-kitchen), an easy-to-use open-source tool for experimenting with serialization strategies. Initial experiments in table retrieval show large performance differences between different serializations. Metadata can provide highly relevant signal and improve performance significantly. Besides this, we find that there exist no single best serialization strategy but rather that the serialization strategy has to be tailored to the embedding model. Overall, our findings suggest that by optimizing table serialization, you can significantly enhance LLM performance on tabular data.
+
 Large Language Models (LLMs) have revolutionized how we interact with data, enabling tasks like question answering, text-to-SQL generation, and more. However, these models typically require text-based inputs, which poses a challenge when working with tabular data. To apply LLMs to tables, we need to convert the structured data into a textual format—a process known as **table serialization**. But how do we serialize tables effectively? And does the way we serialize them impact the performance of downstream tasks?
 
 In this blog post, we dive into the world of table serialization for dense retrieval tasks. We’ll share our journey of experimenting with different serialization strategies, highlighting key findings and providing practical insights. Along the way, we’ll introduce the [**Table Serialization Kitchen**](https://github.com/daniel-gomm/table-serialization-kitchen), an open-source tool we developed to make experimentation easier. (This project was presented at the [ELLIS workshop on Representation Learning and Generative Models for Structured Data 2025](https://sites.google.com/view/rl-and-gm-for-sd). Find our extended abstract ["Metadata Matters in Dense Table Retrieval" here](https://openreview.net/forum?id=rELWIvq2Qy))
@@ -192,6 +195,22 @@ approach for their specific use case. By doing so, you can unlock the full poten
 tabular data.
 
 Happy experimenting!
+
+---
+
+If you find this project useful, please cite it as:
+
+```
+@inproceedings{
+    gomm2025metadata,
+    title={Metadata Matters in Dense Table Retrieval},
+    author={Daniel Gomm and Madelon Hulsebos},
+    booktitle={ELLIS workshop on Representation Learning and Generative Models for Structured Data},
+    year={2025},
+    url={https://openreview.net/forum?id=rELWIvq2Qy},
+    pdf={https://openreview.net/pdf?id=rELWIvq2Qy}
+}
+```
 
 **References:**
 
