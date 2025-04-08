@@ -4,7 +4,7 @@
     "label": "PhD Student",
     "image": "",
     "email": "daniel.gomm@cwi.nl",
-    "url": "https://daniel-gomm.github.io/",
+    "url": "https://www.daniel-gomm.com/",
     "summary": "PhD Student at Centrum Wiskunde & Informatica and the University of Amsterdam",
     "location": {
       "city": "Amsterdam",
@@ -14,7 +14,7 @@
       {
         "network": "Bluesky",
         "username": "daniel-gomm.bsky.social",
-        "url": ""
+        "url": "https://bsky.app/profile/daniel-gomm.bsky.social"
       }
     ]
   },
@@ -44,7 +44,7 @@
       "url": "https://www.intel.com",
       "startDate": "2022-10-01",
       "endDate": "2023-03-31",
-      "summary": "Work on System Trace tool; software tooling for (pre-production) silicon debugging and tracing"
+      "summary": "Work on System Trace tool; software tooling for (pre-production) silicon debugging and tracing."
     },
     {
       "name": "FZI Research Center for Information Technology",
@@ -136,6 +136,12 @@
     }
   ],
   "publications": [
+    {
+      "name": "Metadata Matters in Dense Table Retrieval",
+      "publisher": "ELLIS workshop on Representation Learning and Generative Models for Structured Data",
+      "releaseDate": "2025",
+      "url": "https://openreview.net/pdf?id=rELWIvq2Qy"
+    },
     {
       "name": "CoDy: Counterfactual Explainers for Dynamic Graphs",
       "publisher": "arXiv preprint",
