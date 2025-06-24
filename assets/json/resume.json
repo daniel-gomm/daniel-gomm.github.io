@@ -144,9 +144,9 @@
     },
     {
       "name": "CoDy: Counterfactual Explainers for Dynamic Graphs",
-      "publisher": "arXiv preprint",
-      "releaseDate": "2024-03-25",
-      "url": "https://arxiv.org/pdf/2403.16846"
+      "publisher": "International Conference on Machine Learning (ICML)",
+      "releaseDate": "2025",
+      "url": "https://openreview.net/pdf?id=FE9QN8d536"
     },
     {
       "name": "Counterfactual Explanations for Black-Box Models on Dynamic Graphs",
