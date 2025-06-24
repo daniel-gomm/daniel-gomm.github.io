@@ -1,19 +1,17 @@
 ---
 ---
 
-@misc{qu2024greedycodycounterfactualexplainers,
-      title={GreeDy and CoDy: Counterfactual Explainers for Dynamic Graphs},
-      author={Zhan Qu and Daniel Gomm and Michael Faerber},
-      year={2024},
-      eprint={2403.16846},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2403.16846},
-      abstract={Temporal Graph Neural Networks (TGNNs), crucial for modeling dynamic graphs with time-varying interactions, face a significant challenge in explainability due to their complex model structure. Counterfactual explanations, crucial for understanding model decisions, examine how input graph changes affect outcomes. This paper introduces two novel counterfactual explanation methods for TGNNs: GreeDy (Greedy Explainer for Dynamic Graphs) and CoDy (Counterfactual Explainer for Dynamic Graphs). They treat explanations as a search problem, seeking input graph alterations that alter model predictions. GreeDy uses a simple, greedy approach, while CoDy employs a sophisticated Monte Carlo Tree Search algorithm. Experiments show both methods effectively generate clear explanations. Notably, CoDy outperforms GreeDy and existing factual methods, with up to 59\% higher success rate in finding significant counterfactual inputs. This highlights CoDy's potential in clarifying TGNN decision-making, increasing their transparency and trustworthiness in practice.},
-      arxiv={2403.16846},
-      pdf={https://arxiv.org/pdf/2403.16846},
-      bibtex_show={true},
-      selected={true}
+@inproceedings{
+qu2025cody,
+title={CoDy: Counterfactual Explainers for Dynamic Graphs},
+author={Zhan Qu and Daniel Gomm and Michael Faerber},
+booktitle={Forty-second International Conference on Machine Learning},
+year={2025},
+url={https://openreview.net/forum?id=FE9QN8d536},
+bibtex_show={true},
+selected={true},
+abstract={Temporal Graph Neural Networks (TGNNs) are widely used to model dynamic systems where relationships and features evolve over time. Although TGNNs demonstrate strong predictive capabilities in these domains, their complex architectures pose significant challenges for explainability. Counterfactual explanation methods provide a promising solution by illustrating how modifications to input graphs can influence model predictions. To address this challenge, we present CoDy—Counterfactual Explainer for Dynamic Graphs—a model-agnostic, instance-level explanation approach that identifies counterfactual subgraphs to interpret TGNN predictions. CoDy employs a search algorithm that combines Monte Carlo Tree Search with heuristic selection policies, efficiently exploring a vast search space of potential explanatory subgraphs by leveraging spatial, temporal, and local event impact information. Extensive experiments against state-of-the-art factual and counterfactual baselines demonstrate CoDy's effectiveness, with improvements of 16% in AUFSC+ over the strongest baseline. Our code is available at: https://github.com/daniel-gomm/CoDy},
+pdf={https://openreview.net/pdf?id=FE9QN8d536}
 }
 
 @inproceedings{
