@@ -176,6 +176,11 @@
       "language": "Spanish",
       "fluency": "Limited working proficiency",
       "icon": ""
+    },
+    {
+      "language": "Dutch",
+      "fluency": "Limited working proficiency",
+      "icon": ""
     }
   ],
   "interests": [
@@ -183,6 +188,10 @@
       "name": "DIY",
       "icon": "fa-solid fa-tag",
       "keywords": ["Woodworking", "3D-Modeling", "3D-Printing", "CNC-Machining"]
+    },
+    {
+      "name": "Climbing",
+      "icon": "fa-solid fa-tag"
     }
   ]
 }
