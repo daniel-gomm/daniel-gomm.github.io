@@ -19,15 +19,15 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am a PhD student at the [Database Architectures Group](https://www.cwi.nl/en/groups/database-architectures/) at
+I am a PhD student at the [Table Representation Learning Lab](https://trl-lab.github.io/) within the [Database Architectures Group](https://www.cwi.nl/en/groups/database-architectures/) at
 Centrum Wiskunde & Informatica (CWI) and the [Information Retrieval Lab](https://irlab.science.uva.nl/) at the
 University of Amsterdam, researching at the intersection of generative AI, information retrieval, and structured data.
 With my research I contribute towards democratizing insights from the wealth of structured data (tables, relational
 databases, spreadsheets,...) by contextualizing generative methods in structured data.
 
 I come from a highly interdisciplinary background in engineering, economy, and computer science and have plenty of
-real-world experience in industry, academia, and policy (have a look at my CV for more information).
+real-world experience in industry, academia, and policy (have a look at my [CV](./cv) for more reference).
 
-In my free time I like to be creative in small (DIY) projects. I'm into CAD and CNC machining and generally in 
-tinkering around! I also love to go to the mountains to hike, ski, or climb and you can often spot me in the local
-climbing and bouldering gyms.
+
+Beyond research, I like to be creative in small (DIY) projects, to cook, and to explore the outdoors. I also love to go 
+in the mountains to hike, ski, or climb. In Amsterdam, you can often spot me in the local climbing and bouldering gyms.
