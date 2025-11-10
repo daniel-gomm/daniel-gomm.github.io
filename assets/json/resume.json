@@ -137,6 +137,18 @@
   ],
   "publications": [
     {
+      "name": "Are We Asking the Right Questions? On Ambiguity in Natural Language Queries for Tabular Data Analysis",
+      "publisher": "AI for Tabular Data workshop at EurIPS 2025",
+      "releaseDate": "2025",
+      "url": "https://arxiv.org/abs/2511.04584"
+    },
+    {
+      "name": "Unlocking the Full Potential of Data Science Requires Tabular Foundation Models, Agents, and Humans",
+      "publisher": "Preprint",
+      "releaseDate": "2025",
+      "url": "https://openreview.net/forum?id=aXMPvmBAm5"
+    },
+    {
       "name": "Metadata Matters in Dense Table Retrieval",
       "publisher": "ELLIS workshop on Representation Learning and Generative Models for Structured Data",
       "releaseDate": "2025",
