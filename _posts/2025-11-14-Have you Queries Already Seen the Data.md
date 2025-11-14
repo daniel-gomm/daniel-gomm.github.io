@@ -5,7 +5,7 @@ date: 2025-11-14
 description: We take a look at how many popular benchmarks for evaluating natural language interfaces to tabular data
   contain "data-privileged" queries—questions that reference specific components of the data that real users wouldn't
   know about in open-domain settings.
-tags: trl
+tags: trl open-domain benchmarks
 categories: article
 pretty_table: true
 toc:
@@ -69,7 +69,7 @@ in open-domain scenarios.
 
 We identify three distinct manifestations of data-privilege in queries:
 
-### Structural References - When Queries Speak Database
+#### 1. Structural References - When Queries Speak Database
 
 Structural references occur when queries use terminology that sounds more like database schema than natural
 language—phrases that feel "copied" rather than "composed." The most obvious cases involve programming conventions:
@@ -84,7 +84,7 @@ the correlation between a country's 'carbon dioxide emissions per year (tons per
 km² of land'?"_[^19]. Those precise metric definitions in quotes strongly suggest knowledge of exactly how these
 measurements are labeled in a specific dataset.
 
-### Value References - Knowing the Database Contents
+#### 2. Value References - Knowing the Database Contents
 
 Value references reveal knowledge of what specific data values exist in underlying tables. The clearest cases involve
 internal identifiers, i.e., codes or keys that exist purely within a dataset's organizing logic. Consider this from
@@ -98,7 +98,7 @@ places, organizations, or dates don't necessarily indicate data-privilege. Askin
 Olympics" uses world knowledge, not dataset-specific knowledge. The distinction lies in whether the specificity comes
 from general knowledge or from having seen the particular data.
 
-### Container References - Breaking the Fourth Wall
+#### 3. Container References - Breaking the Fourth Wall
 
 Container references explicitly acknowledge working with a data artifact, breaking the illusion of asking about the
 world. Phrases like "in the dataset," "according to the table," or "using the provided spreadsheet" directly reference
