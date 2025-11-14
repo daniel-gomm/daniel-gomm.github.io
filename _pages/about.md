@@ -28,6 +28,5 @@ databases, spreadsheets,...) by contextualizing generative methods in structured
 I come from a highly interdisciplinary background in engineering, economy, and computer science and have plenty of
 real-world experience in industry, academia, and policy (have a look at my [CV](./cv) for more reference).
 
-
-Beyond research, I like to be creative in small (DIY) projects, to cook, and to explore the outdoors. I also love to go 
+Beyond research, I like to be creative in small (DIY) projects, to cook, and to explore the outdoors. I also love to go
 in the mountains to hike, ski, or climb. In Amsterdam, you can often spot me in the local climbing and bouldering gyms.

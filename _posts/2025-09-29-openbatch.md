@@ -25,20 +25,18 @@ The primary motivation for using the Batch API is efficiency. It provides two ke
 
 The trade-off for this (cost-)efficiency has traditionally been convenience. Instead of a simple request-response cycle, the batch workflow involves manually preparing a JSONL file, uploading it, starting the job, and then retrieving the results from a separate file. This is especially cumbersome and challenging when you need to generate prompts dynamically or make use of [structured outputs](https://platform.openai.com/docs/guides/structured-outputs).
 
-
 ## Convenient Batch Processing with `openbatch`
 
 `openbatch` is a lightweight Python library that simplifies the creation of the batch input file by providing a developer experience that mirrors the official `openai` Python client. It's designed to be a near drop-in replacement that can integrate into existing workflows, allowing you to switch between sequential and batch processing with minimal code changes.
 
 The library's core features directly address the common pain points of the batch workflow:
 
-* **Familiar API**: The `BatchCollector` class mimics the structure of `openai.OpenAI`, so you can write `collector.responses.create(...)` instead of `client.responses.create(...)`.
-* **Structured Outputs with Pydantic**: Reliably getting JSON output from LLMs can be tricky. `openbatch` allows you to pass a Pydantic model directly to a `parse()` method (e.g., `collector.responses.parse(text_format=MyModel)`), which automatically handles the complex JSON schema generation needed to enforce the output structure.
-* **Powerful Templating**: With the `BatchJobManager`, you can define a `PromptTemplate` with placeholders and programmatically generate thousands or millions of requests from a list of data, which is ideal for large-scale, repetitive tasks.
-* **Full API Coverage**: It supports all endpoints available in the Batch API: `/v1/responses`, `/v1/chat/completions`, and `/v1/embeddings`.
+- **Familiar API**: The `BatchCollector` class mimics the structure of `openai.OpenAI`, so you can write `collector.responses.create(...)` instead of `client.responses.create(...)`.
+- **Structured Outputs with Pydantic**: Reliably getting JSON output from LLMs can be tricky. `openbatch` allows you to pass a Pydantic model directly to a `parse()` method (e.g., `collector.responses.parse(text_format=MyModel)`), which automatically handles the complex JSON schema generation needed to enforce the output structure.
+- **Powerful Templating**: With the `BatchJobManager`, you can define a `PromptTemplate` with placeholders and programmatically generate thousands or millions of requests from a list of data, which is ideal for large-scale, repetitive tasks.
+- **Full API Coverage**: It supports all endpoints available in the Batch API: `/v1/responses`, `/v1/chat/completions`, and `/v1/embeddings`.
 
 Have a look at the full documentation at [https://daniel-gomm.github.io/openbatch](https://daniel-gomm.github.io/openbatch) for more details and how-to guides.
-
 
 ### Installation
 
@@ -63,20 +61,20 @@ from typing import Literal
 class SentimentAnalysisModel(BaseModel):
     sentiment: Literal["Positive", "Neutral", "Negative"]
     confidence: float = Field(
-        ge=0.0, 
-        le=1.0, 
+        ge=0.0,
+        le=1.0,
         description="Confidence score for the sentiment classification."
     )
 ```
 
 Now, let's assume our `customer_reviews.csv` looks like this:
 
-| review\_id | review\_text                               |
-|-----------|-------------------------------------------|
-| a-123     | The product is absolutely fantastic\!      |
-| b-456     | It broke after just one week of use.      |
-| c-789     | The packaging was okay.                   |
-| ...       | *(thousands more rows)* |
+| review_id | review_text                           |
+| --------- | ------------------------------------- |
+| a-123     | The product is absolutely fantastic\! |
+| b-456     | It broke after just one week of use.  |
+| c-789     | The packaging was okay.               |
+| ...       | _(thousands more rows)_               |
 
 #### Approach 1: The Standard Sequential Loop
 
@@ -184,7 +182,6 @@ print(f"Batch file '{batch_file_path}' generated with BatchJobManager.")
 
 This approach is the cleanest and most declarative, perfectly suited for large-scale, programmatic batch job creation.
 
-
 #### Creating the Batch Job
 
 Once the batch-job-file is created, the batch-job can be started. This is possible through the [Batches Web UI](https://platform.openai.com/batches) or programatically via the standard `openai` client:
@@ -225,7 +222,7 @@ print(f"Current job status: {completed_job.status}")
 if completed_job.status == 'completed':
     output_file_id = completed_job.output_file_id
     print(f"Job finished! Output file ID: {output_file_id}")
-    
+
     # Download the results file
     results_content = client.files.content(file_id=output_file_id)
     with open("batch_results.jsonl", "wb") as f:
@@ -237,11 +234,8 @@ elif completed_job.status in ['failed', 'expired', 'cancelled']:
 
 The downloaded `batch_results.jsonl` file will contain the output for each of the input requests, which can then be parsed for the application. Thanks to the structured output feature, the JSON responses for the requests will be clean, valid, and ready to be loaded directly into the Pydantic models.
 
-
 ## Conclusion
 
 The OpenAI Batch API is a powerful tool for processing large datasets efficiently and cost-effectively. While its asynchronous nature can introduce complexity, libraries like [`openbatch`](https://daniel-gomm.github.io/openbatch) abstract away the tedious work of file preparation. By providing a familiar, Pydantic-powered interface, it makes the benefits of batch processing accessible without sacrificing developer convenience, allowing researchers and engineers to focus on their results, not their boilerplate.
 
 For more detail on `openbatch`, including installation instructions and comprehensive documentation, visit the [official documentation site](https://daniel-gomm.github.io/openbatch).
-
-
