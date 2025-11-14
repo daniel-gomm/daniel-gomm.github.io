@@ -12,7 +12,7 @@ toc:
   sidebar: left
 ---
 
-> **Note:** This blog post is a deep-dive into a critical issue surfaced in our recent paper _["Are We Asking the Right
+> **Note:** This blog post is a deep-dive into a critical issue surfaced in our recent paper _"[Are We Asking the Right
 > Questions? On Ambiguity in Natural Language Queries for Tabular Data Analysis](https://arxiv.org/abs/2511.04584)"_ 
 > accepted to the [AI for Tabular Data Workshop at EurIPS 2025](https://sites.google.com/view/eurips25-ai-td/home).
 
@@ -94,9 +94,10 @@ about _"authors who publish books in both 'MM' and 'LT' series"_[^4] or _"client
 cryptic codes that point to internal categorization schemes.
 
 Not all value references indicate leakage of privileged information. Publicly knowable named entities like people,
-places, organizations, or dates don't necessarily indicate data-privilege. Asking about "Janja Garnbret" or "the 2024
-Olympics" uses world knowledge, not dataset-specific knowledge. The distinction lies in whether the specificity comes
-from general knowledge or from having seen the particular data.
+places, organizations, or dates don't necessarily indicate data-privilege. Asking about
+"[Janja Garnbret](https://en.wikipedia.org/wiki/Janja_Garnbret)" or "the 2024 Olympics" uses world knowledge, not
+dataset-specific knowledge. The distinction lies in whether the specificity comes from general knowledge or from having
+seen the particular data.
 
 #### 3. Container References - Breaking the Fourth Wall
 
@@ -204,16 +205,16 @@ exploit privileged information rather than to genuinely understand user informat
 
 ---
 
-If you found this blog post interesting, please check out our full
-paper: [Are We Asking the Right Questions? On Ambiguity in Natural Language Queries for Tabular Data](https://arxiv.org/abs/2511.04584)
+If you found this blog post interesting, please check out our full paper: 
+[Are We Asking the Right Questions? On Ambiguity in Natural Language Queries for Tabular Data](https://arxiv.org/abs/2511.04584)
 
 Cite as:
 
 ```
 @inproceedings{gommAreWeAsking2025,
-  title = {Are {{We Asking}} the {{Right Questions}}? {{On Ambiguity}} in {{Natural Language Queries}} for {{Tabular Data Analysis}}},
-  shorttitle = {Are {{We Asking}} the {{Right Questions}}?},
-  booktitle = {{{AI}} for {{Tabular Data}} Workshop at {{EurIPS}} 2025},
+  title = {Are We Asking the Right Questions? On Ambiguity in Natural Language Queries for Tabular Data Analysis},
+  shorttitle = {Are We Asking the Right Questions?},
+  booktitle = {AI for Tabular Data Workshop at EurIPS 2025},
   author = {Gomm, Daniel and Wolff, Cornelius and Hulsebos, Madelon},
   year = 2025,
   url = {https://arxiv.org/abs/2511.04584}
