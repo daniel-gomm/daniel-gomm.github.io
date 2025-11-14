@@ -12,9 +12,9 @@ toc:
   sidebar: left
 ---
 
-> **Note:** This blog post is a deep-dive into a critical issue surfaced in our recent paper _"Are We Asking the Right
-> Questions? On Ambiguity in Natural Language Queries for Tabular Data Analysis"_ accepted to the
-> [AI for Tabular Data Workshop at EurIPS 2025](https://sites.google.com/view/eurips25-ai-td/home).
+> **Note:** This blog post is a deep-dive into a critical issue surfaced in our recent paper _["Are We Asking the Right
+> Questions? On Ambiguity in Natural Language Queries for Tabular Data Analysis](https://arxiv.org/abs/2511.04584)"_ 
+> accepted to the [AI for Tabular Data Workshop at EurIPS 2025](https://sites.google.com/view/eurips25-ai-td/home).
 
 > **TL;DR:** Many popular benchmarks for evaluating natural language interfaces to tabular data contain
 > "data-privileged" queries—questions that reference specific database structures, internal codes, or data containers
