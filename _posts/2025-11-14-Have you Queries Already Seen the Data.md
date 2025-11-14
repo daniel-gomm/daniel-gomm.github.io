@@ -10,7 +10,6 @@ categories: article
 pretty_table: true
 toc:
   sidebar: left
-thumbnail: assets/img/blog/table_serialization_cover_picture.jpg
 ---
 
 > **Note:** This blog post is a deep-dive into a critical issue surfaced in our recent paper _"Are We Asking the Right
