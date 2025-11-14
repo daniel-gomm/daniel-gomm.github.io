@@ -13,3 +13,7 @@
 "rijke":
   - firstname: ["Maarten", "M."]
     url:
+
+"wolff":
+  - firstname: ["Cornelius", "C."]
+    url: https://cornelius-wolff.de/
