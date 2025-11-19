@@ -30,8 +30,8 @@ toc:
 Natural language interfaces to databases have come a long way. What started as systems that let users query a single,
 known database with questions like "How many employees work in the sales department?" are evolving into something far
 more ambitious: open-domain systems that identify relevant tabular data from vast, unknown corpora before answering
-queries. This shift is happening across the board—from text-to-SQL generation[^1][^2] to question
-answering[^7][^16][^9] to full-scale data analysis[^6][^3].
+queries. This shift is happening across the board—from text-to-SQL generation[^1] [^2] to question
+answering[^7] [^16] [^9] to full-scale data analysis[^6] [^3].
 
 But there's a problem hiding in plain sight. As researchers start evaluating open-domain systems they plainly adapt
 existing datasets from closed-domain settings (where users know exactly which database they're querying) or device new
@@ -149,8 +149,8 @@ zoomable=true %}
 **Figure 1:** Distribution of data-privileged queries across 15 tabular benchmarks, broken down by reference type.
 
 A critical finding for the community concerns text-to-SQL datasets. Spider[^4] and BIRD [^5], while originally designed
-for closed-domain scenarios, are increasingly being repurposed to evaluate open-domain text-to-SQL systems[^1][^2]. Yet
-our analysis reveals that 27% and 26% of their queries respectively contain data-privileged information[^4][^5]. While
+for closed-domain scenarios, are increasingly being repurposed to evaluate open-domain text-to-SQL systems[^1] [^2]. Yet
+our analysis reveals that 27% and 26% of their queries respectively contain data-privileged information[^4] [^5]. While
 these rates are more moderate than some of the complex analysis benchmarks, they represent hundreds of queries that
 provide unrealistic shortcuts in open-domain settings. Researchers adapting these datasets should be aware that a
 substantial fraction of queries assume knowledge users wouldn't have when querying unknown databases. Even among
@@ -205,7 +205,7 @@ exploit privileged information rather than to genuinely understand user informat
 
 ---
 
-If you found this blog post interesting, please check out our full paper: 
+If you found this blog post interesting have a look at our full paper: 
 [Are We Asking the Right Questions? On Ambiguity in Natural Language Queries for Tabular Data](https://arxiv.org/abs/2511.04584)
 
 Cite as:
