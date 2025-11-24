@@ -10,6 +10,20 @@ categories: article
 pretty_table: true
 toc:
   sidebar: left
+authors:
+  - name: Daniel Gomm
+    url: "https://daniel-gomm.com"
+    affiliations:
+      name: CWI & University of Amsterdam
+  - name: Cornelius Wolff
+    url: "https://cornelius-wolff.de/"
+    affiliations:
+      name: CWI & University of Amsterdam
+  - name: Madelon Hulsebos
+    url: "https://www.madelonhulsebos.com/"
+    affiliations:
+      name: CWI
+
 ---
 
 > **Note:** This blog post is a deep-dive into a critical issue surfaced in our recent paper _"[Are We Asking the Right
