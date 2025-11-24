@@ -9,7 +9,7 @@ pretty_table: true
 featured: true
 authors:
   - name: Daniel Gomm
-    url: "https://daniel-gomm.com"
+    url: "https://www.daniel-gomm.com"
     affiliations:
       name: CWI, University of Amsterdam
   - name: Cornelius Wolff
