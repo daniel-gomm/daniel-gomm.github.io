@@ -1,29 +1,32 @@
 ---
-layout: post
+layout: distill
 title: Have your Queries Already Seen the Data? Data-Privilege in Tabular Benchmarks
 date: 2025-11-14
-description: We take a look at how many popular benchmarks for evaluating natural language interfaces to tabular data
-  contain "data-privileged" queries—questions that reference specific components of the data that real users wouldn't
-  know about in open-domain settings.
+description: Investigation into what information is leaked into queries in popular tabular benchmarks.
 tags: trl open-domain benchmarks
 categories: article
 pretty_table: true
-toc:
-  sidebar: left
+featured: true
 authors:
   - name: Daniel Gomm
     url: "https://daniel-gomm.com"
     affiliations:
-      name: CWI & University of Amsterdam
+      name: CWI, University of Amsterdam
   - name: Cornelius Wolff
     url: "https://cornelius-wolff.de/"
     affiliations:
-      name: CWI & University of Amsterdam
+      name: CWI, University of Amsterdam
   - name: Madelon Hulsebos
     url: "https://www.madelonhulsebos.com/"
     affiliations:
       name: CWI
-
+toc:
+  - name: When Your Test Data Knows Too Much
+  - name: What Is Data-Privilege, and Why Should We Care?
+  - name: Data-Privilege Across 15 Popular Benchmarks
+  - name: Beyond Data-Privilege - Aligning Queries with Users’ Mental Model
+  - name: "Looking Forward: Toward Realistic Open-Domain Evaluation"
+  - name: References
 ---
 
 > **Note:** This blog post is a deep-dive into a critical issue surfaced in our recent paper _"[Are We Asking the Right
