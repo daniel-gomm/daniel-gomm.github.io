@@ -1,13 +1,17 @@
 ---
-layout: post
+layout: distill
 title: Painless GPU Passthrough Under Fedora
 date: 2026-02-17
 description: This post covers how to set-up separate boot entries for GPU passthrough on/off under Fedora Linux.
 tags: code guide linux
 categories: project
-pretty_table: true
 toc:
-  sidebar: left
+  - name: Who This Guide Is For
+  - name: What You'll Need
+  - name: How GPU Passthrough Works
+  - name: Setting Up GPU Passthrough on Fedora
+  - name: Maintaining the dual-mode setup
+  - name: Automating It With `gpu-passthrough`
 thumbnail: assets/img/blog/gpu_passthrough/gpu_passthrough_cover.png
 ---
 
@@ -48,11 +52,11 @@ To understand what the setup process is doing and why, it helps to know what's h
 
 The IOMMU (Input-Output Memory Management Unit) is the hardware foundation for passthrough. It sits between your PCI devices and system memory, translating between device-visible memory addresses and physical addresses. This translation is what makes it safe to give a device directly to a virtual machine without compromising the host's memory isolation[^5].
 
-The IOMMU organizes PCI devices into **IOMMU groups**, which are sets of devices that share the same address space boundary. A critical rule of passthrough is that you must pass through all devices in a group together. This is why you'll often need to pass through both a GPU and its companion audio controller (used for HDMI/DisplayPort audio), since they typically share an IOMMU group[^5][^6].
+The IOMMU organizes PCI devices into **IOMMU groups**, which are sets of devices that share the same address space boundary. A critical rule of passthrough is that you must pass through all devices in a group together. This is why you'll often need to pass through both a GPU and its companion audio controller (used for HDMI/DisplayPort audio), since they typically share an IOMMU group[^5] [^6].
 
 ### VFIO: Binding Devices for Passthrough
 
-VFIO (Virtual Function I/O) is the Linux kernel framework that makes PCI device passthrough possible. Normally, your GPU is claimed by a driver like `nvidia` or `nouveau` as soon as the system boots. VFIO provides an alternative driver called `vfio-pci` that you can bind to the GPU instead. When `vfio-pci` is bound to a device, the host kernel stops using that device entirely and makes it available for assignment to a virtual machine[^6][^7].
+VFIO (Virtual Function I/O) is the Linux kernel framework that makes PCI device passthrough possible. Normally, your GPU is claimed by a driver like `nvidia` or `nouveau` as soon as the system boots. VFIO provides an alternative driver called `vfio-pci` that you can bind to the GPU instead. When `vfio-pci` is bound to a device, the host kernel stops using that device entirely and makes it available for assignment to a virtual machine[^6] [^7].
 
 The guest VM then sees the GPU as if it were physically connected, and the guest's native driver (for example, NVIDIA's Windows driver) takes over. This is what gives you near-native performance rather than the slow emulated graphics of a standard virtual display adapter.
 
@@ -145,7 +149,7 @@ After rebooting into the passthrough kernel, your NVIDIA GPU will no longer be v
 
 Some AMD and NVIDIA GPUs suffer from what the VFIO community calls a "reset bug." The symptom is that the GPU refuses to re-initialize after a VM is shut down, meaning you cannot start the VM again without rebooting the entire host. This happens because QEMU fails to correctly reset the card's internal state when the guest releases it[^9].
 
-The issue has historically been most common with AMD GPUs, particularly Polaris (RX 400/500 series), Vega, and some Navi cards[^10][^11]. For AMD cards, a kernel module called `vendor-reset`[^10] provides device-specific reset procedures that can work around the bug on many affected models. Some NVIDIA GPUs can also exhibit reset issues, though they tend to be less widespread and often manifest differently, such as long delays during re-initialization rather than a complete failure[^12].
+The issue has historically been most common with AMD GPUs, particularly Polaris (RX 400/500 series), Vega, and some Navi cards[^10] [^11]. For AMD cards, a kernel module called `vendor-reset`[^10] provides device-specific reset procedures that can work around the bug on many affected models. Some NVIDIA GPUs can also exhibit reset issues, though they tend to be less widespread and often manifest differently, such as long delays during re-initialization rather than a complete failure[^12].
 
 For the dual-mode workflow described in this guide, the reset bug is less of a concern in practice. Since you are rebooting to switch between passthrough and normal mode anyway, the GPU gets a clean hardware reset every time. The bug primarily affects setups where you want to start and stop VMs repeatedly without rebooting, such as server or headless configurations. Still, it is worth being aware of: if you encounter issues where your VM refuses to start a second time within the same boot, the reset bug is a likely culprit, and rebooting the host will resolve it.
 
