@@ -20,7 +20,7 @@ I use Fedora Linux as my daily driver. In my research, my NVIDIA GPU is essentia
 
 What I really needed was a way to run the full Windows version of Fusion with proper GPU acceleration, without giving up my Linux environment. GPU passthrough with KVM/QEMU makes this possible. It lets you run a Windows virtual machine with direct access to your physical GPU, giving you near-native graphics performance. The tricky part is that Fedora's frequent kernel updates break the passthrough configuration every time, requiring manual re-setup. To solve this, I wrote [`gpu-passthrough`](https://github.com/daniel-gomm/qemu-gpu-passthrough-fedora), a script that automates the entire process. This post explains the technical background, walks through the manual setup, and shows how the script makes ongoing maintenance painless.
 
-**Disclaimer:** At the time of writing (02/2026), I have tested everything described below on system running Fedora 43 Workstation Edition with an AMD Ryzen 5900HX processor and an NVIDIA RTX 3050 GPU. Use the instructions made here on your own risk.
+**Disclaimer:** At the time of writing (02/2026), I have tested everything described below on system running Fedora 43 Workstation Edition with an AMD Ryzen 5900HX processor and an NVIDIA RTX 3050 mobile GPU. Use the instructions made here on your own risk.
 
 ## Who This Guide Is For
 
@@ -71,7 +71,7 @@ Reboot into your firmware settings and make sure that virtualization support and
 ### Step 2: Identify Your GPU's PCI IDs
 
 {% include figure.liquid path="assets/img/blog/gpu_passthrough/lspci_vvnn_nvidia.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-**_Figure 1:_** _Result of running `lspci -vvnn | grep NVIDIA`_ and identifying the GPU PCI ID. My machine has a only a single PCI group. 
+**_Figure 1:_** _Result of running `lspci -vvnn | grep NVIDIA` and identifying the GPU PCI ID. My system has a only a single PCI group._
 
 You need the vendor and device ID pairs for your GPU and any companion devices in its IOMMU group. Run `lspci -vvnn` and locate your discrete GPU. You're looking for something like this:
 
@@ -111,12 +111,13 @@ Then enable IOMMU, disable the EFI framebuffer for the passthrough GPU, load the
 ```bash
 # For AMD CPUs:
 sudo grubby --update-kernel=0 --args="video=efifb:off amd_iommu=on \
-    rd.driver.pre=vfio-pci kvm.ignore_msrs=1 vfio-pci.ids=10de:25a1,10de:2291"
+    rd.driver.pre=vfio-pci kvm.ignore_msrs=1 vfio-pci.ids=YOUR_PCI_IDs"
 
 # For Intel CPUs:
 sudo grubby --update-kernel=0 --args="video=efifb:off intel_iommu=on \
-    rd.driver.pre=vfio-pci kvm.ignore_msrs=1 vfio-pci.ids=10de:25a1,10de:2291"
+    rd.driver.pre=vfio-pci kvm.ignore_msrs=1 vfio-pci.ids=YOUR_PCI_IDs"
 ```
+Make sure to replace `YOUR_PCI_IDs` with your actual PCI IDs (`10de:25a1,10de:2291` in the example).
 
 ### Step 5: Configure Dracut (First-Time Only)
 
