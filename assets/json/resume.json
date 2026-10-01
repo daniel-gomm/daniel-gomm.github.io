@@ -137,6 +137,12 @@
   ],
   "publications": [
     {
+      "name": "Open Tabular Insight Extraction: Where Do We Stand, and Where Should We Go?",
+      "publisher": "arXiv",
+      "releaseDate": "2026",
+      "url": "https://arxiv.org/pdf/2609.07629"
+    },
+    {
       "name": "Are We Asking the Right Questions? On Ambiguity in Natural Language Queries for Tabular Data Analysis",
       "publisher": "AI for Tabular Data workshop at EurIPS 2025",
       "releaseDate": "2025",
